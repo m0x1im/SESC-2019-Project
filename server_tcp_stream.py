@@ -4,7 +4,7 @@ import subprocess
 
 
 s = socket.socket()
-host = '192.168.0.10' # Айпи устройства с Моб. приложением
+host = '192.168.0.10' # ip устройства с Моб. приложением
 port = 11111
 
 s.connect((host, port))
