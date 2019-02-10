@@ -29,8 +29,6 @@ def broadcastListener(port):
             data, addr = server.recvfrom(1024)
             if data == b"HIS(init)":
                 broadcastSendIP(port)
-            print("Тут что-то пришло, чекай: \"%s\""%data)
-            print("От него: ", addr)
         except socket.timeout:
             print("timeout")
             print("continue working")
