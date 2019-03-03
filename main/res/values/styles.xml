@@ -1,0 +1,28 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    
+    <style name="login_input">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginEnd">20dp</item>
+        <item name="android:background">@drawable/login_input_bg</item>
+        <item name="android:padding">10dp</item>
+    </style>
+    
+    <style name="login_btn" parent="login_input">
+        <item name="android:background">@drawable/login_btn_bg</item>
+        <item name="android:textColor">@color/login_btn_color</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:stateListAnimator">@animator/login_btn_animator</item>
+    </style>
+
+</resources>
