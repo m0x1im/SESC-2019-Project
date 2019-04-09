@@ -91,7 +91,7 @@ def accepting_connection():
 			# Возможная проблема: Сервер не будет захватывать данные, отправленные приложением-клиентом
 
 			chunk = conn.recv(1024)
-			if chunk in id_app:
+			if chunk == id_app:
 				all_mobileapps.append(conn)
 				all_mobadress.append(address)
 			else:
