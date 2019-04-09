@@ -79,7 +79,7 @@ def accepting_connection():
 		try:
 			conn, address = s.accept()
 			s.setblocking(1) # Предотвращение timeout
-
+			id_app = 'mobileapp' # Строчка-идентификатор от mob app
 
 			#-------------------------------------------------------------------------
 			# Пытаемся определить мобильное приложение. 
@@ -91,7 +91,7 @@ def accepting_connection():
 			# Возможная проблема: Сервер не будет захватывать данные, отправленные приложением-клиентом
 
 			chunk = conn.recv(1024)
-			if chunk not in '':
+			if chunk in id_app:
 				all_mobileapps.append(conn)
 				all_mobadress.append(address)
 			else:
@@ -102,6 +102,7 @@ def accepting_connection():
 
 		except:
 			print("Error accepting connections")
+			break
 
 
 #---------------------------------------------------------------------------------------------------------
